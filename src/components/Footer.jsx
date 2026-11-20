@@ -60,7 +60,7 @@ export const Footer = ({ variant = "default" }) => {
                   +91 8237503021
                 </a>
                 <a
-                  href="/blessy-tuscano.vcf"
+                  href={`${import.meta.env.BASE_URL}blessy-tuscano.vcf`}
                   download="Blessy_Tuscano_Contact.vcf"
                   className="inline-block text-xs text-muted-foreground hover:text-accent transition-colors pt-0.5 underline underline-offset-4 decoration-muted-foreground/50 hover:decoration-accent"
                   title="Download contact vCard (.vcf)"

@@ -122,7 +122,7 @@ export const Contact = () => {
               {/* Download Contact Card (.vcf) button */}
               <div className="pt-3">
                 <a
-                  href="/blessy-tuscano.vcf"
+                  href={`${import.meta.env.BASE_URL}blessy-tuscano.vcf`}
                   download="Blessy_Tuscano_Contact.vcf"
                   className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-foreground/30 text-xs font-mono uppercase tracking-widest text-foreground hover:bg-foreground hover:text-background transition-all duration-300 shadow-sm group cursor-pointer"
                   title="Download vCard to add Blessy Tuscano directly to contacts"

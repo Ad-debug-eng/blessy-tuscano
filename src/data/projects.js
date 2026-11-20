@@ -1,4 +1,6 @@
-export const projects = [
+import { asset } from "../utils/asset";
+
+const rawProjects = [
   {
     id: "neon-glow",
     title: "BETSUBARA",
@@ -119,3 +121,9 @@ export const projects = [
     themeForeground: "177 83% 9%"
   }
 ];
+
+export const projects = rawProjects.map((p) => ({
+  ...p,
+  coverImage: asset(p.coverImage),
+  images: (p.images || []).map(asset)
+}));

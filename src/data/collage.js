@@ -1,4 +1,6 @@
-export const collageItems = [
+import { asset } from "../utils/asset";
+
+const rawCollageItems = [
   {
     id: "mat",
     src: "/assets-v1/1c76b57b-caec-4375-90c2-4d63100088ab/collage-mat.jpg",
@@ -114,4 +116,9 @@ export const collageItems = [
   }
 ];
 
-export const contactPortrait = "/assets-v1/e0f0a922-482c-4532-b599-b16b7543794f/blessy-portrait.jpg";
+export const collageItems = rawCollageItems.map((item) => ({
+  ...item,
+  src: asset(item.src)
+}));
+
+export const contactPortrait = asset("/assets-v1/e0f0a922-482c-4532-b599-b16b7543794f/blessy-portrait.jpg");
